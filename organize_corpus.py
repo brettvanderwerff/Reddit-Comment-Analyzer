@@ -45,16 +45,12 @@ def run(experimental_file, comparison_file, experimental_label, comparison_label
     '''
     experimental_corpus = open_corpus(experimental_file)
     comparison_corpus = open_corpus(comparison_file)
-
     shuffled_experimental_corpus = tokenize_corpus(experimental_corpus)
     shuffled_comparison_corpus = tokenize_corpus(comparison_corpus)
-
     experimental_train, experimental_train_label, experimental_test, experimental_test_label\
         = split_test_train(shuffled_experimental_corpus, experimental_label)
-
     comparison_train, comparison_train_label, comparison_test, comparison_test_label\
         = split_test_train(shuffled_comparison_corpus, comparison_label)
-
     combine_train, combine_train_label, combine_test, combine_test_label =\
         combine_data(experimental_train, comparison_train, experimental_train_label, comparison_train_label,\
                      experimental_test, comparison_test, experimental_test_label, comparison_test_label)
