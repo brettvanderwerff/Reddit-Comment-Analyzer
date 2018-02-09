@@ -2,7 +2,7 @@
 or a random redditor.
 
 Note that this program depends on the user already having run collect_data.py successfully
-resultsing in a copy of FriesWithThat_comments.txt and random_redditor_comments.txt saved to the disk.
+resulting in a copy of FriesWithThat_comments.txt and random_redditor_comments.txt saved to the disk.
 '''
 
 import organize_corpus
