@@ -16,8 +16,8 @@ class ObtainRedditorComments():
         '''Function writes corpus of comments to the disk under name of the redditor for which comments
         are obtained for.
         '''
-        print('Writing to file {}.txt'.format(self.redditor_name))
-        with open('{}.txt'.format(self.redditor_name), 'w', encoding='utf-8') as file_object:
+        print('Writing to file {}_comments.txt'.format(self.redditor_name))
+        with open('{}_comments.txt'.format(self.redditor_name), 'w', encoding='utf-8') as file_object:
             for item in corpus:
                 file_object.write(item + '\n')
 
@@ -73,14 +73,16 @@ class ObtainRedditorComments():
                 if len(corpus) == self.comment_limit:
                     self.write_corpus(corpus)
                     print('{} total comments found'.format(len(corpus)))
-                    exit()
+                    break
+
                 else:
                     print('Getting a page of comments.')
                     utc, corpus = self.get_next_pages(utc, corpus)
             except IndexError:
                 self.write_corpus(corpus)
                 print('Cannot find anymore comments, {} total comments found.'.format(len(corpus)))
-                exit()
+                break
+
 
 
 
