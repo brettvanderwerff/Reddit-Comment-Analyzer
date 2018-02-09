@@ -26,7 +26,7 @@ def get_redditor_comment_list():
     redditor_list = get_redditor_list()
     comment_list = []
     for redditor in redditor_list:
-            if len(comment_list) < 10:
+            if len(comment_list) < 1000:
                 try:
                     comment = get_recent_comment(redditor=redditor)
                     comment_list.append(comment)
