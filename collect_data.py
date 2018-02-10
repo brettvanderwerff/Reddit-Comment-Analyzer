@@ -15,3 +15,6 @@ def collect_data(redditor_name):
     print('Obtaining comments from random redditors, this may take several minutes.')
     get_random_redditor_list.run()
     get_random_redditor_comments.run()
+
+if __name__ == '__main__':
+    collect_data('FriesWithThat')
