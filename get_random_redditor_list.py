@@ -12,7 +12,7 @@ reddit = praw.Reddit(client_id='Your id goes here',
 
 def generate_redditor_list():
     '''Function uses praw to call Reddit's API and get a list of the authors of 2000 recent submissions in
-    r/all and return the authors as a list for temporary use.
+    r/all and returns the authors as a list for temporary use.
     '''
     redditor_list = []
     while len(redditor_list) <2000:
