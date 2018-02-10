@@ -37,7 +37,7 @@ def get_redditor_comment_list():
     return comment_list
 
 def write_corpus(comment_list):
-    '''Function writes the temporary list of redditor comments gotten from the get_redditor_comment_list funciton
+    '''Function writes the temporary list of redditor comments gotten from the get_redditor_comment_list function
     to the disk.
     '''
     with open('random_redditor_comments.txt', 'a', encoding='utf-8') as write_obj:
