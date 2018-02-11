@@ -41,5 +41,9 @@ How to configure this program:
 2.	1000 comments are collected for the redditor of interest by default, this can be changed by adjusting the comment_limit argument of the ObtainRedditorComments class in the collect_data.py script. You may have to consider that some redditors have a small comment history.
 3.	The amount of comments gotten from random redditors can be toggled by changing the if len(comment_list) statement in the get_redditor_comment_list function of the get_random_redditor_comments.py script. The while len(redditor_list) statement in the generate_redditor_list function of the get_random_redditor_list.py script should be about double the len(comment_list) setting in get_random_redditor_comments.py. This circumvents issues with redditors making comments in private subreddits that are not available.  
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Bugs:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+These seems to be a bug with the Pushift reddit API (https://github.com/pushshift/api) that returns an erroneous statement  (https://pastebin.com/e8fEw4sE or something similar to this) when getting comments for the redditor of interest. This gets written to the txt file of comments for the redditor of interest. Simply remove this before analysis with naive bayes. 
 
 
