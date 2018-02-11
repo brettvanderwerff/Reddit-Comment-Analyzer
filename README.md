@@ -12,10 +12,15 @@ Dependencies:
 ~~~~~~~~~~~~~
 
 nltk==3.2.5
+
 pandas==0.22.0
+
 praw==5.3.0
+
 requests==2.18.4
+
 scipy==1.0.0
+
 scikit_learn==0.19.1
 
 ~~~~~~~~~~~~~~~~~~~~~~~~
