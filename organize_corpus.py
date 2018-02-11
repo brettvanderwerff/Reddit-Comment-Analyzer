@@ -9,7 +9,7 @@ def open_corpus(file_name):
     return corpus
 
 def tokenize_corpus(corpus):
-    '''Function takes inputted corpus and divides it into a lists of sentences. The function then randomizes the order
+    '''Function takes inputted corpus and divides it into a list of sentences. The function then randomizes the order
     of the list of sentences.
     '''
     tokenized_corpus = sent_tokenize(corpus)
@@ -18,8 +18,8 @@ def tokenize_corpus(corpus):
 
 
 def split_test_train(shuffled_corpus, label):
-    '''Function divides 2/3 of the inputted corpus into a training set and 1/3 into a testing set. an integer
-    label is also assigned to the corpus based on user input. Function returns both the training and testing set along
+    '''Function divides 2/3 of the inputted corpus into a training list and 1/3 into a testing list. an integer
+    label is also assigned to the corpus based on user input. Function returns both the training and testing list along
     with a corresponding list of their labels.
     '''
     shuffled_corpus_train = shuffled_corpus[0:round(len(shuffled_corpus) * .67)]
@@ -30,8 +30,8 @@ def split_test_train(shuffled_corpus, label):
 
 def combine_data(experimental_train, comparison_train, experimental_train_label, comparison_train_label,\
                  experimental_test, comparison_test, experimental_test_label, comparison_test_label):
-    '''Function combines the experimental and comparison corpus into a single list. Function also
-    combines the experimental and comparison corpus label lists into a single list. This is needed for downstream
+    '''Function combines the experimental and comparison lists into a single list. Function also
+    combines the experimental and comparison list labels into a single list. This is needed for downstream
     analysis.
     '''
     combine_train = experimental_train + comparison_train
