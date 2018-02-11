@@ -28,9 +28,10 @@ How to run this program:
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 1.	Clone repository.
-2.	Get a reddit account, client id, client secret, and user agent. Many guides exist online for doing this, the official PRAW documentation is not a bad place to start (https://praw.readthedocs.io/en/latest/getting_started/quick_start.html). Once these credentials are gotten, they need to be plugged into the get_random_redditor_list.py script.
-3.	Run collect_data.py, this script writes a txt file to the disk with a collection of comments from the redditor of interest and another txt file for a collection of comments from random redditors, these files are required for the next step. API calls in this script are throttled and it should take several minutes to run.
-4.	Run naïve_bayes.py, this script will return a percentage score of how accurately the classifier can distinguish between comments made by the redditor of interest or a random redditor. 
+2. Install dependencies
+3.	Get a reddit account, client id, client secret, and user agent. Many guides exist online for doing this, the official PRAW documentation is not a bad place to start (https://praw.readthedocs.io/en/latest/getting_started/quick_start.html). Once these credentials are gotten, they need to be plugged into the get_random_redditor_list.py script.
+4.	Run collect_data.py, this script writes a txt file to the disk with a collection of comments from the redditor of interest and another txt file for a collection of comments from random redditors, these files are required for the next step. API calls in this script are throttled and it should take several minutes to run.
+5.	Run naïve_bayes.py, this script will return a percentage score of how accurately the classifier can distinguish between comments made by the redditor of interest or a random redditor. 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 How to configure this program:
